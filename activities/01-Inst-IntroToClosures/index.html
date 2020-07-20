@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Closure Activity #1 - Intro to Closures (INST)</title>
+</head>
+
+<body>
+
+    <h1>Closure Activity #1 - Intro to Closures (INST)</h1>
+    <h2>✨Open the console to see the magic!✨</h2>
+
+    <script>
+
+        // Global Scope
+        const firstName = "Terrence";
+
+        outerFunc = () => {
+            // Outer Scope
+            const lastName = 'Mahnken';
+
+            innerFunc = () => {
+                // Inner Scope
+                const greeting = "Hi";
+                console.log(`${greeting}, ${firstName} ${lastName}`);
+            }
+
+            // Returns the inner function with access to the outer function's local "lastName" variable.
+            return innerFunc;
+        }
+
+        const myFunc = outerFunc();
+
+        // Use console.dir to view the properties of an object.
+        // NOTE 1: The name of the function is "innerFunc", not "outerFunc" as one might expect. This because "innerFunc" is what is being returned by outerFunc.
+        // NOTE 2: Expand the "[[Scopes]]" property to view the global, outer (i.e "script"), and inner (i.e. "closure") scopes.
+        console.dir(myFunc);
+
+        // "Hi, Terrence Mahnken" is logged in the console.
+        myFunc();
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Closure Activity #5 - Closure Loop (INST)</title>
+</head>
+<body>
+
+  <h1>Closure Activity #5 - Closure Loop (INST)</h1>
+  <h2>✨Open the console to see the magic!✨</h2>
+
+  <script>
+
+    var funcArr = [];
+
+    createFunc = (i) => {
+      // Closure function
+      return () => {
+        console.log("My value: " + i);
+      };
+    }
+
+    // With each loop a new instance of the createFunc function is added to the array.
+    for (let i = 0; i < 5; i++) {
+      funcArr[i] = createFunc(i * 2);
+    }
+
+    // console.log(funcArr) to see results of the first loop.
+    // console.log(funcArr);
+
+    // The second loop will call function with the array but maintains the original local variable (i).
+    for (let j = 0; j < 5; j++) {
+      // Note the use of an Immediately Invoked Function Expression (IIFE) denoted by the use of the "()" immediately following 
+      funcArr[j]();
+    }
+
+  </script>
+
+</body>
+</html>

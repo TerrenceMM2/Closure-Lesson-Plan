@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Closure Activity #4 (SOLVED) - Keep It Private (STU)</title>
+</head>
+<body>
+
+  <h1>Closure Activity #4 (SOLVED) - Keep It Private (STU)</h1>
+  <h2>✨Open the console to see the magic!✨</h2>
+
+  <script>
+
+    // 1. Create a function called payDay.
+    payDay = () => {
+
+      // 2. Create a local variable called acctBalance and set to a positive integer.
+      let acctBalance = 1000;
+
+      // 3. Create a local function called transaction that takes in a number parameter called "amount". This function will add amount to acctBalance and reassign the value.
+      transaction = (amount) => {
+        acctBalance += amount;
+      }
+
+      // 4. Return an object that contains functions to withdrawal, deposit, and checks the current balance.
+      return {
+        withdrawal: (num) => {
+          transaction(num);
+        },
+        deposit: (num) => {
+          transaction(num);
+        },
+        balance: () => {
+          return acctBalance;
+        }
+      }
+    }
+
+    // 5. Test your closure functions by creating a new, global scope variable called "payPeriod", calling each function, and passing in a positive or negative integer.
+    const payPeriod = payDay();
+    console.log(`Starting Balance = $${payPeriod.balance()}`);
+    payPeriod.withdrawal(-500);
+    console.log(`Balance after Rent = $${payPeriod.balance()}`);
+    payPeriod.withdrawal(-100);
+    console.log(`Balance after Groceries = ${payPeriod.balance()}`);
+    payPeriod.withdrawal(-20);
+    console.log(`Balance after fuel fill-up = $${payPeriod.balance()}`);
+    payPeriod.deposit(200);
+    console.log(`Balance after deposit = $${payPeriod.balance()}`);
+
+  </script>
+
+</body>
+</html>
