@@ -13,7 +13,7 @@
 
 	<script>
 		userProfile = () => {
-			// Local variables to the userProfile function
+			// Local variables to the "userProfile" function
 			let username = "";
 			let password = "";
 
@@ -36,20 +36,20 @@
 			}
 		}
 
-		// Create a new instance of userProfile.
+		// Create a new instance of "userProfile".
 		const terrence = userProfile();
 		console.log(terrence);
 		console.log(typeof terrence); // Returns "object"
 
-		// Set & Get "username" variable of the terrence object.
+		// Set & Get "username" variable of the "terrence" object.
 		console.log(terrence.setUsername("Terrence"));
 		console.log(terrence.getUsername());
 
-		// Set & Get "password" variable of the terrence object.
+		// Set & Get "password" variable of the "terrence" object.
 		console.log(terrence.setPassword("password"));
 		console.log(terrence.getPassword());
 
-		// Cannot directly access the username script variable.
+		// Cannot directly access the "username" inner ("script") variable.
 		console.log(terrence.username); // Returns "undefined"
 		console.log(terrence.password); // Returns "undefined"
 

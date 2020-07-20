@@ -21,7 +21,7 @@
             };
         }
 
-        // With each loop a new instance of the createFunc function is added to the array.
+        // Within each loop a new instance of the "createFunc" function's anonymous closure function is added to the array.
         for (let i = 0; i < 5; i++) {
             funcArr[i] = createFunc(i * 2);
         }
@@ -29,9 +29,9 @@
         // console.log(funcArr) to see results of the first loop.
         // console.log(funcArr);
 
-        // The second loop will call function with the array but maintains the original local variable (i).
+        // The second loop will call the closure function within the array but maintains the original value of its local variable (i).
         for (let j = 0; j < 5; j++) {
-            // Note the use of an Immediately Invoked Function Expression (IIFE) denoted by the use of the "()" immediately following 
+            // Note the use of an Immediately Invoked Function Expression (IIFE) denoted by the use of the "()" immediately following. 
             funcArr[j]();
         }
     </script>
