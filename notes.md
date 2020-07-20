@@ -1,13 +1,13 @@
 ### Sources:
 
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures
-https://www.w3schools.com/js/js_function_closures.asp
-https://medium.com/javascript-scene/master-the-javascript-interview-what-is-a-closure-b2f0d2152b36
-https://medium.com/@prashantramnyc/javascript-closures-simplified-d0d23fa06ba4
-https://www.youtube.com/watch?v=1JsJx1x35c0
-https://dmitripavlutin.com/simple-explanation-of-javascript-closures/
-http://javascriptissexy.com/understand-javascript-closures-with-ease/
-https://scotch.io/courses/10-need-to-know-javascript-concepts/closures#:~:text=Closures%20give%20us%20the%20ability,through%20the%20object
+-   https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures
+-   https://www.w3schools.com/js/js_function_closures.asp
+-   https://medium.com/javascript-scene/master-the-javascript-interview-what-is-a-closure-b2f0d2152b36
+-   https://medium.com/@prashantramnyc/javascript-closures-simplified-d0d23fa06ba4
+-   https://www.youtube.com/watch?v=1JsJx1x35c0
+-   https://dmitripavlutin.com/simple-explanation-of-javascript-closures/
+-   http://javascriptissexy.com/understand-javascript-closures-with-ease/
+-   https://scotch.io/courses/10-need-to-know-javascript-concepts/closures#:~:text=Closures%20give%20us%20the%20ability,through%20the%20object
 
 ### Closure concepts:
 
