@@ -1,38 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Closure Activity #6 (SOLVED) - Closure Loop (STU)</title>
+    <meta charset="UTF-8">
+    <title>Closure Activity #6 (SOLVED) - Closure Loop (STU)</title>
 </head>
+
 <body>
 
-  <h1>Closure Activity #6 (SOLVED) - Closure Loop (STU)</h1>
-  <h2>✨Open the console to see the magic!✨</h2>
+    <h1>Closure Activity #6 (SOLVED) - Closure Loop (STU)</h1>
+    <h2>✨Open the console to see the magic!✨</h2>
 
-  <script>
+    <script>
+        // 1. Create two arrays - one called favoriteFoods with a list of foods, one empty arr called funcArr.
+        let favoriteFoods = ["pizza", "sushi", "sandwiches", "cheesecake", "bagels"];
+        let funcArr = [];
 
-      // 1. Create two arrays - one called favoriteFoods with a list of foods, one empty arr called funcArr.
-      let favoriteFoods = ["pizza", "sushi", "sandwiches", "cheesecake", "bagels"];
-      let funcArr = [];
+        // 2. Create a function called foodFunc that takes in a parameter (i) and returns an anonymous function. The anonymous function should console.log a given index of the favoriteFoods array.
+        foodFunc = (i) => {
+            return () => {
+                console.log(`I like ${favoriteFoods[i]}.`);
+            };
+        }
 
-      // 2. Create a function called foodFunc that takes in a parameter (i) and returns an anonymous function. The anonymous function should console.log a given index of the favoriteFoods array.
-      foodFunc = (i) => {
-        return () => {
-          console.log(`I like ${favoriteFoods[i]}.`);
-        };
-      }
+        // 3. Create a loop to go through the favoriteFoods array and adds a new instance of the foodFunc function and passes the current index.
+        for (let i = 0; i < favoriteFoods.length; i++) {
+            funcArr[i] = foodFunc(i);
+        }
 
-      // 3. Create a loop to go through the favoriteFoods array and adds a new instance of the foodFunc function and passes the current index.
-      for (let i = 0; i < favoriteFoods.length; i++) {
-        funcArr[i] = foodFunc(i);
-      }
-
-      // 4. Create a for loop to iterate through each index in the funcArr array and call each function using an Immediately Invoked Function Expression (IIFE).
-      for (let j = 0; j < funcArr.length; j++) {
-        funcArr[j]();
-      }
-
-  </script>
+        // 4. Create a for loop to iterate through each index in the funcArr array and call each function using an Immediately Invoked Function Expression (IIFE).
+        for (let j = 0; j < funcArr.length; j++) {
+            funcArr[j]();
+        }
+    </script>
 
 </body>
+
 </html>
